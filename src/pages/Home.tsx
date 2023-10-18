@@ -9,7 +9,10 @@ export const Home = (props: Props) => {
       <nav>
         <ul>
           <li>
-            <Link to={`/monthstatistics`}>Your Name</Link>
+            <Link to={`/monthstatistics`}>MonthStatistics</Link>
+          </li>
+          <li>
+            <Link to={`/error`}>Error</Link>
           </li>
         </ul>
       </nav>
