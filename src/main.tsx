@@ -8,10 +8,16 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { MonthStatistics } from './pages/MonthStatistics.tsx';
+import Header from './components/Layout/Header/Header.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <App />,
+    errorElement: <Error />,
+  },
+  {
+    path: '/home',
     element: <Home />,
     errorElement: <Error />,
   },
@@ -20,6 +26,10 @@ const router = createBrowserRouter([
     element: <MonthStatistics />,
     errorElement: <Error />,
   },
+  {
+    path: '/error',
+    element: <Error />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -27,6 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <Router>
       <App />
     </Router> */}
+    <Header />
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );

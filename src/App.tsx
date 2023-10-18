@@ -1,20 +1,28 @@
 // import { useState } from 'react';
 // import reactLogo from './assets/react.svg';
 // import viteLogo from '/vite.svg';
-import { Route, Switch } from 'react-router';
-import './assets/styles/main.scss';
-import { Home } from './pages/Home';
-import { MonthStatistics } from './pages/MonthStatistics';
+// import './assets/styles/main.scss';
+import { Link } from 'react-router-dom';
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <section>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/" exact component={MonthStatistics} />
-      </Switch>
+      <div>Начальная страница</div>
+      <nav>
+        <ul>
+          <li>
+            <Link to={`/home`}>Home</Link>
+          </li>
+          <li>
+            <Link to={`/monthstatistics`}>MonthStatistics</Link>
+          </li>
+          <li>
+            <Link to={`/error`}>Error</Link>
+          </li>
+        </ul>
+      </nav>
     </section>
   );
 }
