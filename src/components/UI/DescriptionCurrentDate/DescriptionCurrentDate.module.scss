@@ -1,6 +1,12 @@
 .description {
   border-radius: 20px;
-  filter: blur(0.5692583919px);
   padding: 42px 32px;
   background-color: rgba(255, 255, 255, 0.26);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
 }
