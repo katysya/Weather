@@ -2,7 +2,7 @@ import { ColourOption } from '../data';
 import Select, { StylesConfig } from 'react-select';
 
 const options = [
-  { value: 'city1', label: 'Санкт-Пеербург' },
+  { value: 'city1', label: 'Санкт-Петербург' },
   { value: 'city2', label: 'Mocква' },
   { value: 'city3', label: 'Новгород' },
 ];
@@ -11,7 +11,7 @@ const colourStyles: StylesConfig<ColourOption> = {
   control: (styles) => ({
     ...styles,
     backgroundColor: 'white',
-    width: '200px',
+    width: '300px',
     padding: '5px',
     border: 'none',
     borderRadius: '10px',
@@ -20,5 +20,11 @@ const colourStyles: StylesConfig<ColourOption> = {
 };
 
 export default function SelectApp() {
-  return <Select options={options} styles={colourStyles} />;
+  return (
+    <Select
+      defaultValue={options[0]}
+      options={options}
+      styles={colourStyles}
+    />
+  );
 }

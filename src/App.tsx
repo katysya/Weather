@@ -1,8 +1,9 @@
 // import { useState } from 'react';
 // import reactLogo from './assets/react.svg';
 // import viteLogo from '/vite.svg';
-// import './assets/styles/main.scss';
+import '@/assets/styles/main.scss';
 import { Link } from 'react-router-dom';
+import Information from './components/Section/Information/Information';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      <Information />
     </section>
   );
 }

@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  filter: blur(0.5692583918571472px);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.temperature {
+  color: $white;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.day {
+  color: $white;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.img {
+  width: 119px;
+  height: 119px;
+}
+
+.text {
+  color: $white;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
