@@ -4,6 +4,7 @@
 import '@/assets/styles/main.scss';
 import { Link } from 'react-router-dom';
 import Information from './components/Section/Information/Information';
+import FilterWeather from '@components/Section/FilterWeather/Filterweather';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
         </ul>
       </nav>
       <Information />
+      <FilterWeather />
     </section>
   );
 }

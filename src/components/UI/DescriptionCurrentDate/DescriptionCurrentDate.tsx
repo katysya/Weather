@@ -15,21 +15,21 @@ const data = [
   },
   {
     id: 2,
-    img: parameter1,
-    name: 'Температура',
-    value: '20° - ощущается как 17°',
+    img: parameter2,
+    name: 'Давление',
+    value: '765 мм ртутного столба - нормальное',
   },
   {
     id: 3,
-    img: parameter1,
-    name: 'Температура',
-    value: '20° - ощущается как 17°',
+    img: parameter3,
+    name: 'Осадки',
+    value: 'Без осадков',
   },
   {
     id: 4,
-    img: parameter1,
-    name: 'Температура',
-    value: '20° - ощущается как 17°',
+    img: parameter4,
+    name: 'Ветер',
+    value: '3 м/с юго-запад - легкий ветер',
   },
 ];
 
@@ -37,34 +37,15 @@ export default function DescriptionCurrentDate() {
   return (
     <div className={style.description}>
       <ul className={style.list}>
-        <li>
-          <Parametr
-            img={parameter1}
-            name="Температура"
-            value="20° - ощущается как 17°"
-          />
-        </li>
-        <li>
-          <Parametr
-            img={parameter2}
-            name="Давление "
-            value="765 мм ртутного столба - нормальное"
-          />
-        </li>
-        <li>
-          <Parametr
-            img={parameter3}
-            name="Осадки"
-            value="Без осадков"
-          />
-        </li>
-        <li>
-          <Parametr
-            img={parameter4}
-            name="Ветер"
-            value="3 м/с юго-запад - легкий ветер"
-          />
-        </li>
+        {data.map((item) => (
+          <li key={item.id}>
+            <Parametr
+              img={item.img}
+              name={item.name}
+              value={item.value}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );

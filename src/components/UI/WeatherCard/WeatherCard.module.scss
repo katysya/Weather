@@ -1,0 +1,40 @@
+.card {
+  border-radius: 10px;
+  background: rgba(71, 147, 255, 0.2);
+  padding: 11px;
+}
+
+.weather {
+  width: 48px;
+  height: 48px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.temperatureDay {
+  color: $black;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.temperatureNight {
+  color: $gray;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.description {
+  color: $gray;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
