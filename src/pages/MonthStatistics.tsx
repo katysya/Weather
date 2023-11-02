@@ -1,4 +1,4 @@
-import { Statistics } from '../components/Section/Statistics/Statistics';
+import Statistics from '../components/Section/Statistics/Statistics';
 
 interface Props {}
 
