@@ -4,7 +4,7 @@
   gap: 31px;
   padding: 20px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(#{--components-background-default});
 }
 
 .top {
@@ -33,7 +33,7 @@
 }
 
 .day {
-  color: $white;
+  color: var(#{--text-default});
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@
 }
 
 .text {
-  color: $white;
+  color: $gray;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;

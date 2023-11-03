@@ -4,3 +4,37 @@ $white: #ffffff;
 $purple: #6d6ccf;
 $gray: #939cb0;
 $black: #000000;
+
+$--text-dark: white;
+$--text-light: black;
+
+$--body-background-dark: black;
+$--body-background-light: white;
+
+$--components-background-dark: #4f4f4f;
+$--components-background-light: white;
+
+$--card-background-dark: #2e3035;
+$--card-background-light: rgba(71, 147, 255, 0.2);
+
+:root {
+  /*Body*/
+  --body-background-dark: #{$--body-background-dark};
+  --body-background-light: #{$--body-background-light};
+  --body-background-default: #{$--body-background-light};
+
+  /*Components*/
+  --components-background-dark: #{$--components-background-dark};
+  --components-background-light: #{$--components-background-light};
+  --components-background-default: #{$--components-background-light};
+
+  /*Card*/
+  --card-background-dark: #{$--card-background-dark};
+  --card-background-light: #{$--card-background-light};
+  --card-background-default: #{$--card-background-light};
+
+  /*Text*/
+  --text-dark: #{$--text-dark};
+  --text-light: #{$--text-light};
+  --text-default: #{$--text-light};
+}

@@ -1,12 +1,13 @@
 .card {
   border-radius: 10px;
-  background: rgba(71, 147, 255, 0.2);
+  background: var(#{--card-background-default});
   padding: 11px;
 }
 
 .weather {
   width: 48px;
   height: 48px;
+  color: var(#{--text-default});
 
   img {
     width: 100%;
@@ -16,7 +17,7 @@
 }
 
 .temperatureDay {
-  color: $black;
+  color: var(#{--text-default});
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -29,6 +30,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.day,
+.date {
+  color: var(#{--text-default});
 }
 
 .description {

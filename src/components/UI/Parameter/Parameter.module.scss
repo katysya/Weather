@@ -15,7 +15,7 @@
 }
 
 .name {
-  color: $white;
+  color: var(#{--text-default});
   opacity: 0.8;
   width: 150px;
   text-align: start;
@@ -26,7 +26,7 @@
 }
 
 .value {
-  color: $white;
+  color: var(#{--text-default});
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
