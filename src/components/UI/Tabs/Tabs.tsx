@@ -25,7 +25,12 @@ export default function Tabs() {
     <div className={style.tabs}>
       {time.map((item) => {
         return (
-          <Tab id={item.id} name={item.name} active={item.active} />
+          <Tab
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            active={item.active}
+          />
         );
       })}
     </div>

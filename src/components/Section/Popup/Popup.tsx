@@ -5,6 +5,8 @@ import parameter1 from '@assets/images/Parameter/parameter1.svg';
 import parameter2 from '@assets/images/Parameter/parameter2.svg';
 import parameter3 from '@assets/images/Parameter/parameter3.svg';
 import parameter4 from '@assets/images/Parameter/parameter4.svg';
+import close from '@assets/images/Popup/close.svg';
+import img from '@assets/images/Weather/rain_sun.svg';
 
 const data = [
   {
@@ -35,11 +37,23 @@ const data = [
 
 export default function Popup({ items }: Props) {
   return (
-    <div className="popup">
-      <div className={style.description}>
+    <div className={style.popup}>
+      <div className={style.content}>
+        <div className={style.date}>
+          <div className={style.top}>
+            <p className={style.temperature}>20°</p>
+            <div className={style.img}>
+              <img src={img} alt="" />
+            </div>
+          </div>
+          <div className={style.bottom}>
+            <p className={style.text}>Время: 21:54</p>
+            <p className={style.text}>Город: Санкт-Петербург</p>
+          </div>
+        </div>
         <ul className={style.list}>
           {data.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className={style.text}>
               <Parameter
                 img={item.img}
                 name={item.name}
@@ -48,6 +62,9 @@ export default function Popup({ items }: Props) {
             </li>
           ))}
         </ul>
+        <button className={style.cross}>
+          <img src={close} alt="" />
+        </button>
       </div>
     </div>
   );
