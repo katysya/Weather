@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s;
   background: var(#{--body-background-default});
 }
 

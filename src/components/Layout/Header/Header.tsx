@@ -1,18 +1,16 @@
-import Theme from '@/components/UI/ThemeButton/Theme';
+import ThemeButton from '@/components/UI/ThemeButton/Theme';
 import Logo from '../../UI/Logo/Logo';
 import style from './Header.module.scss';
 import SelectApp from '@/components/UI/SelectApp/SelectApp';
-import { useState } from 'react';
+import { useTheme } from '../../../hooks/useTheme';
+import { Theme } from '../../../context/ThemeContext';
 
 export default function Header() {
-  const [theme, setTheme] = useState('light');
+  const theme = useTheme();
 
   const changeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-    const root = document.querySelector(':root') as HTMLElement;
-    root.style.setProperty(
-      '--body-background-default',
-      `var(--body-background-${theme})`
+    theme.changeTheme(
+      theme.theme == Theme.LIGHT ? Theme.DARK : Theme.LIGHT
     );
   };
 
@@ -23,7 +21,7 @@ export default function Header() {
           <Logo />
           <div className={style.right}>
             <div className={style.theme} onClick={changeTheme}>
-              <Theme />
+              <ThemeButton />
             </div>
             <SelectApp />
           </div>

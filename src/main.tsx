@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { MonthStatistics } from './pages/MonthStatistics.tsx';
 import Header from './components/Layout/Header/Header.tsx';
+import { ThemeProvider } from './provider/ThemeProvider.tsx';
 
 const router = createBrowserRouter([
   {
@@ -34,10 +35,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {/* <Router>
-      <App />
-    </Router> */}
-    <Header />
-    <RouterProvider router={router}></RouterProvider>
+    <ThemeProvider>
+      <Header />
+      <RouterProvider router={router}></RouterProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
